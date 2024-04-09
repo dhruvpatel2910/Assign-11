@@ -1,11 +1,13 @@
 name: Automated Tests
+
 jobs:
   test:
     runs-on: ubuntu-latest
-  steps:
+    steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-  - name: Run Tests
+
+      - name: Run Tests
         run: |
           python find_lowest_number.py test_data/test1_input.txt test_data/test1_output.txt
           python find_lowest_number.py test_data/test2_input.txt test_data/test2_output.txt
